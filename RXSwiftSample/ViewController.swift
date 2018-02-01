@@ -7,11 +7,25 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var toggleSwitch: UISwitch!
+    @IBOutlet weak var toggleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        toggleSwitch.rx.isOn
+            .subscribe(onNext: { [weak self] enabled in
+                if enabled == true {
+                    self?.toggleLabel.text = "The Toggle is enabled"
+                } else {
+                    self?.toggleLabel.text = "The toggle is disbaled"
+                }
+            })
         // Do any additional setup after loading the view, typically from a nib.
     }
 
