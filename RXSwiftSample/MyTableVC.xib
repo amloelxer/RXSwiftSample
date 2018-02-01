@@ -12,7 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyTableVC" customModule="RXSwiftSample" customModuleProvider="target">
             <connections>
+                <outlet property="mySearchTextField" destination="c5e-tw-Kcv" id="tPb-8j-Mkl"/>
                 <outlet property="tableView" destination="ppz-Ie-7eL" id="vbo-dB-uOU"/>
+                <outlet property="titleLabel" destination="9we-um-J5r" id="2mQ-YY-1Vb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,17 +30,27 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ppz-Ie-7eL">
-                    <rect key="frame" x="0.0" y="103" width="375" height="564"/>
+                    <rect key="frame" x="0.0" y="162" width="375" height="505"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c5e-tw-Kcv">
+                    <rect key="frame" x="16" y="95" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="c5e-tw-Kcv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="4S7-WX-lwv"/>
+                <constraint firstItem="ppz-Ie-7eL" firstAttribute="top" secondItem="c5e-tw-Kcv" secondAttribute="bottom" constant="37" id="4wv-hd-ObV"/>
                 <constraint firstItem="ppz-Ie-7eL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="F3j-A4-bGp"/>
-                <constraint firstItem="ppz-Ie-7eL" firstAttribute="top" secondItem="9we-um-J5r" secondAttribute="bottom" constant="39" id="PJo-mF-oQN"/>
+                <constraint firstItem="c5e-tw-Kcv" firstAttribute="top" secondItem="9we-um-J5r" secondAttribute="bottom" constant="31" id="K0F-aq-qRw"/>
                 <constraint firstItem="ppz-Ie-7eL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Vmf-7p-gkk"/>
                 <constraint firstItem="9we-um-J5r" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="23" id="act-6W-3ap"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c5e-tw-Kcv" secondAttribute="trailing" constant="16" id="cjC-3l-3oR"/>
                 <constraint firstItem="ppz-Ie-7eL" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="jZK-9G-mWb"/>
+                <constraint firstItem="c5e-tw-Kcv" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="jap-Ms-VEN"/>
                 <constraint firstItem="9we-um-J5r" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="sNg-gY-9uU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

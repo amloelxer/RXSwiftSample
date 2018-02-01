@@ -14,6 +14,8 @@
 		08050AE32021185200E15C86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08050AE12021185200E15C86 /* LaunchScreen.storyboard */; };
 		08D10F6820237730000C86DB /* MyTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D10F6620237730000C86DB /* MyTableVC.swift */; };
 		08D10F6920237730000C86DB /* MyTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08D10F6720237730000C86DB /* MyTableVC.xib */; };
+		08D10F6D20238FC7000C86DB /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D10F6C20238FC7000C86DB /* CellViewModel.swift */; };
+		08D10F6F2023995D000C86DB /* TitleLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D10F6E2023995D000C86DB /* TitleLabelViewModel.swift */; };
 		6CEBBC994BC8FC96581B9CEC /* Pods_RXSwiftSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E1936C50A36429511ED3E4 /* Pods_RXSwiftSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		08050AE42021185200E15C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08D10F6620237730000C86DB /* MyTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableVC.swift; sourceTree = "<group>"; };
 		08D10F6720237730000C86DB /* MyTableVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableVC.xib; sourceTree = "<group>"; };
+		08D10F6C20238FC7000C86DB /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		08D10F6E2023995D000C86DB /* TitleLabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabelViewModel.swift; sourceTree = "<group>"; };
 		C511B6E509455AC93A7C8161 /* Pods-RXSwiftSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXSwiftSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RXSwiftSample/Pods-RXSwiftSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +77,8 @@
 				08050AE42021185200E15C86 /* Info.plist */,
 				08D10F6620237730000C86DB /* MyTableVC.swift */,
 				08D10F6720237730000C86DB /* MyTableVC.xib */,
+				08D10F6C20238FC7000C86DB /* CellViewModel.swift */,
+				08D10F6E2023995D000C86DB /* TitleLabelViewModel.swift */,
 			);
 			path = RXSwiftSample;
 			sourceTree = "<group>";
@@ -226,6 +232,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08D10F6F2023995D000C86DB /* TitleLabelViewModel.swift in Sources */,
+				08D10F6D20238FC7000C86DB /* CellViewModel.swift in Sources */,
 				08050ADB2021185200E15C86 /* ViewController.swift in Sources */,
 				08050AD92021185200E15C86 /* AppDelegate.swift in Sources */,
 				08D10F6820237730000C86DB /* MyTableVC.swift in Sources */,
