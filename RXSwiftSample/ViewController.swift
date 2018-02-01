@@ -15,25 +15,53 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var toggleSwitch: UISwitch!
     @IBOutlet weak var toggleLabel: UILabel!
+    @IBOutlet weak var clickMeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        toggleSwitch.rx.isOn
-            .subscribe(onNext: { [weak self] enabled in
-                if enabled == true {
-                    self?.toggleLabel.text = "The Toggle is enabled"
-                } else {
-                    self?.toggleLabel.text = "The toggle is disbaled"
-                }
-            })
+        bindToggle()
+        createObservables()
+        bindButton()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func bindToggle() {
+        toggleSwitch.rx.isOn
+            .map({ (enabled) -> String in
+                if enabled == true {
+                    return "The Toggle is enabled"
+                } else {
+                    return "The toggle is disabled"
+                }
+            })
+            .subscribe(onNext: { [weak self] enabledText in
+                self?.toggleLabel.text = enabledText
+            })
+    }
+    
+    func bindButton() {
+        clickMeButton.rx.tap
+            .subscribe(onNext: { [weak self ] tap in
+                let vc = MyTableVC(nibName: "MyTableVC", bundle: nil)
+                self?.present(vc, animated: true, completion: nil)
+            })
     }
 
-
+    // creating Observables
+    
+    func createObservables() {
+        let one = 1
+        let two = 2
+        let three = 3
+        let observable = Observable.of([one, two, three])
+        observable.subscribe(
+        onNext: { element in
+            print(element)
+        },
+        onError: { print($0)},
+        onCompleted: {
+            print("done with my stuff man")
+        })
+    }
 }
 

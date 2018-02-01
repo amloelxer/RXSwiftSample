@@ -27,17 +27,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IU-9C-Y01">
+                                <rect key="frame" x="158" y="454" width="59" height="30"/>
+                                <state key="normal" title="Click Me"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZaI-aY-cZy" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2kK-Es-8Qo"/>
+                            <constraint firstItem="1IU-9C-Y01" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4hP-4Y-SpK"/>
                             <constraint firstItem="ZaI-aY-cZy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="b9L-sV-4bt"/>
                             <constraint firstItem="ZaI-aY-cZy" firstAttribute="top" secondItem="f3g-iN-LqY" secondAttribute="bottom" constant="40" id="bcM-EM-g68"/>
+                            <constraint firstItem="1IU-9C-Y01" firstAttribute="top" secondItem="ZaI-aY-cZy" secondAttribute="bottom" constant="95" id="d85-PZ-Q4W"/>
                             <constraint firstItem="f3g-iN-LqY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dmE-iW-MTc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="clickMeButton" destination="1IU-9C-Y01" id="ECp-JS-gEb"/>
                         <outlet property="toggleLabel" destination="f3g-iN-LqY" id="K86-i5-OQu"/>
                         <outlet property="toggleSwitch" destination="ZaI-aY-cZy" id="Ctq-Py-Bje"/>
                     </connections>
